@@ -96,9 +96,9 @@ def three(input):
 	for i in input:
 		if i == (a, e, i, o, u):
 			vowel_list.append(i)
-    return len(vowel_list)
+	return len(vowel_list)
 
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	# <QUESTION 4>
 
@@ -119,9 +119,12 @@ def three(input):
 
 
 def four(input):
-	input.find('ie')
-
-    return False
+	if "cie" in input:
+		return False
+	elif "ei" in input and "cei" not in input:
+		return False
+	else:
+		return True
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -257,7 +260,11 @@ def eight(arg1):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def nine(input):
-	return ""
+	bert_string = "bert"
+	if input.count("bert") != 2:
+		return ""
+	else:
+		return input[input.find(bert_string)+len(bert_string):input.rfind(bert_string)]
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -287,6 +294,7 @@ def nine(input):
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def ten(input):
+	input.split()
 	return []
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
